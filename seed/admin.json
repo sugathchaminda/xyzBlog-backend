@@ -1,0 +1,15 @@
+{
+    "admin": {
+        "model": "User",
+        "documents": [
+            {
+                "first_name": "sugath",
+                "last_name": "fernando",
+                "status": "Active",
+                "role": "Admin",
+                "email": "sugathsathkorala@gmail.com",
+                "password": "$2a$10$xL8DYeZgjSC1IA.1MKQhSe85RRJR57om3BRnML7d45eQBEbDotZs2"
+            }
+        ]
+    }
+}

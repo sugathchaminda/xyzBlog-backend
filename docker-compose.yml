@@ -1,0 +1,25 @@
+version: '3'
+services:
+    xyz-app:
+        container_name: xyz-app
+        image: latest123/xyz-app
+        restart: always
+        build: .
+        ports:
+          - "7500:7500"
+        links:
+          - xyz_mongo
+    xyz_mongo:
+        container_name: 'xyz_mongo'
+        image: mongo:4.2.2
+        expose:
+            - 27017
+        volumes:
+          - ~/data/db:/data/db
+        ports:
+            - '27022:27017'
+    xyz_redis:
+        container_name: 'xyz_redis'
+        image: redis
+        ports:
+            - '6381:6379'
