@@ -79,6 +79,28 @@ class PostService {
     return response;
   }
 
+  /** Edit post by id */
+  async editById(payload) {
+    const post = await this.postRepository.getPostById(payload.postId);
+    if (!post) throw new ErrorResponse(POST_NOT_FOUND, 404);
+
+    // User authorization check
+    if (post.user.toString() !== payload.userId && payload.userRole !== USER_ROLES.ADMIN) throw new ErrorResponse(USER_NOT_AUTHORIZED, 403);
+
+    post.title = payload.title;
+    post.text = payload.text;
+
+    const updatedPost = await this.postRepository.updatePostById(payload.postId, post);
+    const mappedPost = new PostMapper(updatedPost);
+
+    const response = {
+      success: true,
+      data: mappedPost,
+    };
+
+    return response;
+  }
+
   /** Delete post */
   async deletePost(payload) {
     const post = await this.postRepository.getPostById(payload.postId);

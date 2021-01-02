@@ -36,7 +36,7 @@ router
 
 /**
  * ROUTE    POST: /api/v1/auth/logout
- * DESC     Get current user
+ * DESC     Log out user
  * ACCESS   private
 */
 router

@@ -37,6 +37,23 @@ const getPostById = asyncHandler(async (req, res) => {
   res.status(200).json(response);
 });
 
+
+/** Edit post by id */
+const editPost = asyncHandler(async (req, res) => {
+  const data = {
+    title: req.body.title,
+    text: req.body.text,
+    postId: req.params.id,
+    userId: req.user.id,
+    userRole: req.user.role,
+  };
+
+  const response = await postService.editById(data);
+
+  res.status(200).json(response);
+});
+
+
 /** Delete post */
 const deletePost = asyncHandler(async (req, res) => {
   const data = {
@@ -89,6 +106,7 @@ export {
   getAllPosts,
   createPost,
   getPostById,
+  editPost,
   deletePost,
   approvePost,
   addComment,

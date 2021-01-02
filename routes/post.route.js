@@ -5,6 +5,7 @@ import {
   getAllPosts,
   createPost,
   getPostById,
+  editPost,
   deletePost,
   approvePost,
   addComment,
@@ -52,6 +53,16 @@ router
 router
   .route('/:id')
   .get([protect], getPostById);
+
+/**
+ * ROUTE    PUT: api/posts/:id
+ * DESC     Edit post
+ * ACCESS   private
+*/
+router
+  .route('/:id')
+  .put([protect], editPost);
+
 
 /**
  * ROUTE    DELETE: api/posts/:id
