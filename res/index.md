@@ -199,7 +199,7 @@ URL: {{URL}}/api/v1/auth/closeAccount
 ```bash
 Method: GET
 Type: RAW
-URL: http://localhost:5000/api/v1/posts
+URL: {{URL}}/api/v1/posts
 ```
 
 
@@ -219,7 +219,7 @@ URL: http://localhost:5000/api/v1/posts
 ```bash
 Method: GET
 Type: RAW
-URL: http://localhost:5000/api/v1/posts/all
+URL: {{URL}}/api/v1/posts/all
 ```
 
 
@@ -240,7 +240,7 @@ URL: http://localhost:5000/api/v1/posts/all
 ```bash
 Method: POST
 Type: RAW
-URL: http://localhost:5000/api/v1/posts
+URL: {{URL}}/api/v1/posts
 
 
 ***Headers:***
@@ -271,7 +271,7 @@ URL: http://localhost:5000/api/v1/posts
 ```bash
 Method: GET
 Type: RAW
-URL: http://localhost:5000/api/v1/posts/5dee321e1f454b26a7e1ff55
+URL: {{URL}}/api/v1/posts/5dee321e1f454b26a7e1ff55
 ```
 
 
@@ -291,7 +291,7 @@ URL: http://localhost:5000/api/v1/posts/5dee321e1f454b26a7e1ff55
 ```bash
 Method: DELETE
 Type: RAW
-URL: http://localhost:5000/api/v1/posts/5dee321e1f454b26a7e1ff55
+URL: {{URL}}/api/v1/posts/5dee321e1f454b26a7e1ff55
 ```
 
 
@@ -312,7 +312,7 @@ URL: http://localhost:5000/api/v1/posts/5dee321e1f454b26a7e1ff55
 ```bash
 Method: PUT
 Type: RAW
-URL: http://localhost:5000/api/v1/posts/approve/5dee321e1f454b26a7e1ff55
+URL: {{URL}}/api/v1/posts/approve/5dee321e1f454b26a7e1ff55
 ```
 
 
@@ -341,7 +341,7 @@ URL: http://localhost:5000/api/v1/posts/approve/5dee321e1f454b26a7e1ff55
 ```bash
 Method: PUT
 Type: RAW
-URL: http://localhost:5000/api/v1/posts/5dee321e1f454b26a7e1ff55
+URL: {{URL}}/api/v1/posts/5dee321e1f454b26a7e1ff55
 ```
 
 
@@ -371,7 +371,7 @@ URL: http://localhost:5000/api/v1/posts/5dee321e1f454b26a7e1ff55
 ```bash
 Method: POST
 Type: RAW
-URL: http://localhost:5000/api/v1/posts/5dee321e1f454b26a7e1ff55/comment
+URL: {{URL}}/api/v1/posts/5dee321e1f454b26a7e1ff55/comment
 ```
 
 
