@@ -1,5 +1,4 @@
 import authService from 'services/auth.service';
-
 import { verifyAuthToken } from 'utils/auth.util';
 import { INVALID_TOKEN, NO_TOKEN_PROVIDED } from 'constants/messages.constant';
 

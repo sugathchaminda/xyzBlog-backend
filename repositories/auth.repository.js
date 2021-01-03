@@ -6,14 +6,6 @@ class AuthRepository {
     await user.save();
   }
 
-  async setResetPasswordToken({ resetPasswordToken, resetPasswordExpire }, email) {
-    await User.findOneAndUpdate(
-      { email },
-      { $set: { resetPasswordToken, resetPasswordExpire } },
-      { new: true },
-    );
-  }
-
   async getUserById(id) {
     const user = await User.findById(id).select('+password');
     return user;

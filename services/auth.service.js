@@ -2,10 +2,8 @@ import User from 'models/user.model';
 import AuthRepository from 'repositories/auth.repository';
 import PostRepository from 'repositories/post.repository';
 import ErrorResponse from 'utils/errorResponse.util';
-
 import { UserMapper } from 'mappers';
 import { USER_STATUSES } from 'enums';
-
 import {
   ACCOUNT_CLOSED,
   ACCOUNT_PENDING,
@@ -15,7 +13,6 @@ import {
   UNAUTHORIZED,
   USER_LOG_OUT_SUCCESS,
 } from 'constants/messages.constant';
-
 import {
   hashPassword,
   matchPasswords,
@@ -79,7 +76,7 @@ class AuthService {
     return response;
   }
 
-  /** Login user */
+  /** Logout user */
   async logout(req) {
     const user = await this.authRepository.getUserByEmail(req.user.email);
 
@@ -96,7 +93,7 @@ class AuthService {
   }
 
 
-  /** Get current user */
+  /** Get user profile with posts */
   async getProfileWithPosts(userId) {
     const user = await this.authRepository.getUserById(userId);
 
@@ -117,7 +114,7 @@ class AuthService {
     return response;
   }
 
-  /** Get current user */
+  /** Get auth user */
   async getAuthUser(userId) {
     const user = await this.authRepository.getUserById(userId);
 
@@ -133,7 +130,7 @@ class AuthService {
     return response;
   }
 
-  /** Get current user */
+  /** Get auth user by token */
   async getAuthUserByIdAndToken(userId, token) {
     const user = await this.authRepository.getUserByIdAndToken(userId, token);
 

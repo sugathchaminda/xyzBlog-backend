@@ -3,8 +3,6 @@ import Comment from 'models/comment.model';
 import ErrorResponse from 'utils/errorResponse.util';
 import PostRepository from 'repositories/post.repository';
 import { USER_ROLES, USER_STATUSES } from 'enums';
-
-
 import { PostMapper } from 'mappers';
 import {
   POST_ADDED,

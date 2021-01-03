@@ -1,12 +1,10 @@
 /* eslint-disable no-unused-vars */
-
 import express from 'express';
 import colors from 'colors';
 import { errors } from 'celebrate';
 import config from 'config';
 import log from 'utils/logger.util';
 import initialize from './initialize';
-
 import { SERVER_STARED } from './constants/messages.constant';
 
 const app = express();

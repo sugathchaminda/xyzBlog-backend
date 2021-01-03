@@ -1,5 +1,4 @@
 import { model, Schema } from 'mongoose';
-
 import { USER_ROLES, USER_STATUSES } from 'enums';
 
 const userSchema = new Schema({

@@ -4,6 +4,7 @@ import User from 'models/user.model';
 import Mailer from 'utils/email.util';
 import log from 'utils/logger.util';
 import { SENDGRID_TEMPLATES } from 'constants/common.constant';
+import { EMAIL_POST_SUMMARY_ERROR } from 'constants/messages.constant';
 
 class PostSummarySchedule {
   static async handle() {
@@ -21,7 +22,7 @@ class PostSummarySchedule {
         try {
           await Mailer.send({ to: email }, SENDGRID_TEMPLATES.POST_SUMMARY, emailTemplateData);
         } catch (error) {
-          log.error(email, 'CRONJOB', 'Email send for expiry notice', error.message);
+          log.error(email, 'CRONJOB', EMAIL_POST_SUMMARY_ERROR, error.message);
         }
       });
     } catch (error) {

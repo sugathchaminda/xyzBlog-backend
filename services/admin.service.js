@@ -38,7 +38,7 @@ class AdminService {
     return response;
   }
 
-  /** Update user status */
+  /** Update user role */
   async updateUserRole(userId) {
     const user = await this.adminRepository.getUserById(userId);
 

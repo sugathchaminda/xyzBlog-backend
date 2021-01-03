@@ -5,7 +5,6 @@ import log from 'utils/logger.util';
 // eslint-disable-next-line no-unused-vars
 import colors from 'colors';
 import { DATA_SEEDED } from 'constants/messages.constant';
-
 import adminData from './admin.json';
 
 const dbPath = `mongodb://${config.database.mongodb.host}:${config.database.mongodb.port}/${config.database.mongodb.name}`;

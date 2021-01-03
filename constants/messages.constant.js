@@ -46,3 +46,4 @@ export const EMAIL_SENT                   = 'An email was sent to your account. 
 export const EMAIL_NOT_SENT               = 'Email could not be sent';
 export const RESOURCE_NOT_FOUND           = 'No resource found for this id';
 export const DUPLICATE_FIELD_VALUE        = 'Duplicate field value entered';
+export const EMAIL_POST_SUMMARY_ERROR     = 'Email send for post summary';

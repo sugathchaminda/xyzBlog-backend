@@ -5,7 +5,6 @@ import helmet from 'helmet';
 import hpp from 'hpp';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
-
 import connectDB from 'database';
 import objectIdValidation from 'utils/objectId.util';
 import routes from 'routes';
