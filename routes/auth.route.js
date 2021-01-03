@@ -10,7 +10,7 @@ import {
   closeAccount,
 } from 'controllers/auth.controller';
 
-import { protect, authorize } from 'middleware';
+import { protect } from 'middleware';
 import validations from '../validations';
 
 
@@ -60,7 +60,7 @@ router
 */
 router
   .route('/me')
-  .get([protect, authorize('User')], getAuthUser);
+  .get([protect], getAuthUser);
 
 /**
  * ROUTE    PATCH: /api/v1/auth/closeAccount

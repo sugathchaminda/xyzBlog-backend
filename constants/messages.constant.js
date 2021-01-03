@@ -21,7 +21,7 @@ export const UNAUTHORIZED                 = 'Unauthorized';
 export const USER_UPDATED                 = 'User Updated';
 export const USER_BLOCKED                 = 'Unauthorized. You are blocked by the admin.';
 export const USER_REGISTERED              = 'User registered successfully.';
-
+export const USER_LOG_OUT_SUCCESS         = 'User log out successfully.';
 
 /** PROFILE */
 export const PROFILE_CREATED              = 'Profile created';

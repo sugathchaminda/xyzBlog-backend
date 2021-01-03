@@ -13,6 +13,7 @@ import {
   USER_REGISTERED,
   INVALID_CREDENTIALS,
   UNAUTHORIZED,
+  USER_LOG_OUT_SUCCESS,
 } from 'constants/messages.constant';
 
 import {
@@ -88,7 +89,7 @@ class AuthService {
 
     const response = {
       success: true,
-      data: [],
+      message: USER_LOG_OUT_SUCCESS,
     };
 
     return response;
